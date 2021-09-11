@@ -37,6 +37,10 @@ android {
         dataBinding true
     }
 
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+
 }
 
 configurations.all {

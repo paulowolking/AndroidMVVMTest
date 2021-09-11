@@ -55,12 +55,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:text="@string/value_initial"
             android:textAllCaps="true"
-            android:textColor="@color/colorDarkGray"
+            android:textColor="@color/teal_700"
             app:layout_constraintEnd_toStartOf="@+id/space2"
             app:layout_constraintStart_toEndOf="@+id/space"
-            app:layout_constraintTop_toBottomOf="@+id/editTextValue"
-            tools:text="TextView" />
+            app:layout_constraintTop_toBottomOf="@+id/editTextValue" />
 
         <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/editTextPercent"
@@ -81,12 +81,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:text="@string/tax_percent"
             android:textAllCaps="true"
-            android:textColor="@color/colorDarkGray"
+            android:textColor="@color/teal_700"
             app:layout_constraintEnd_toStartOf="@+id/space2"
             app:layout_constraintStart_toEndOf="@+id/space"
-            app:layout_constraintTop_toBottomOf="@+id/editTextPercent"
-            tools:text="TextView" />
+            app:layout_constraintTop_toBottomOf="@+id/editTextPercent" />
 
         <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/editTextYears"
@@ -107,12 +107,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:text="@string/year"
             android:textAllCaps="true"
-            android:textColor="@color/colorDarkGray"
+            android:textColor="@color/teal_700"
             app:layout_constraintEnd_toStartOf="@+id/space2"
             app:layout_constraintStart_toEndOf="@+id/space"
-            app:layout_constraintTop_toBottomOf="@+id/editTextYears"
-            tools:text="TextView" />
+            app:layout_constraintTop_toBottomOf="@+id/editTextYears" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/textViewResult"
@@ -120,12 +120,13 @@
             android:layout_height="wrap_content"
             android:text="@={viewModel.result}"
             android:textAllCaps="true"
-            android:textColor="@color/colorDarkGray"
+            android:textColor="@color/black"
+            android:textSize="24sp"
             app:layout_constraintBottom_toTopOf="@+id/buttonCalculate"
             app:layout_constraintEnd_toStartOf="@+id/space2"
             app:layout_constraintStart_toEndOf="@+id/space"
             app:layout_constraintTop_toBottomOf="@+id/textView3"
-            tools:text="TextView" />
+            tools:text="Total" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/buttonCalculate"

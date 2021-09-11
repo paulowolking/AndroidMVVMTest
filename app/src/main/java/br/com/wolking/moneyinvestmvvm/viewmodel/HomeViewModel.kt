@@ -1,8 +1,8 @@
 package br.com.wolking.moneyinvestmvvm.viewmodel
 
 import androidx.databinding.ObservableField
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import java.math.RoundingMode
 import java.text.DecimalFormat
 import kotlin.math.pow
 
@@ -12,9 +12,11 @@ class HomeViewModel : ViewModel() {
     val percent: ObservableField<String> = ObservableField()
     val years: ObservableField<String> = ObservableField()
     val result: ObservableField<String> = ObservableField()
+    val toastShow = MutableLiveData<Boolean>()
 
     fun handleCalculateButtonClick() {
         calculate()
+        toastShow.postValue(true)
     }
 
     fun calculate() {
@@ -26,7 +28,7 @@ class HomeViewModel : ViewModel() {
 
             val total = initial * (1 + tax).pow(months)
             val df = DecimalFormat("#.##")
-            df.roundingMode = RoundingMode.CEILING
+            df.maximumFractionDigits = 0
 
             result.set("Total: R$ ${df.format(total)}")
         }

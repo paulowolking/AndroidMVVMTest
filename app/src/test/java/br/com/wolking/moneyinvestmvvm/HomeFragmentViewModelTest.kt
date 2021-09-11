@@ -39,7 +39,7 @@ class HomeFragmentViewModelTest {
         homeViewModel.percent.set("10")
         homeViewModel.years.set("2")
         homeViewModel.calculate()
-        assertEquals("Total: R$ 121,01", homeViewModel.result.get())
+        assertEquals("Total: R$ 121", homeViewModel.result.get())
     }
 
     @Test
